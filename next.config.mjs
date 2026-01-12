@@ -1,34 +1,37 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack(config) {
-    // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.(".svg")
-    );
+	output: "export",
+	images: {unoptimized: true},
+	basePath: "/Novetum-LandingPage",
+	assetPrefix: "/Novetum-LandingPage/",
 
-    config.module.rules.push(
-      // Reapply the existing rule, but only for svg imports ending in ?url
-      {
-        ...fileLoaderRule,
-        test: /\.svg$/i,
-        resourceQuery: /url/, // *.svg?url
-      },
-      // Convert all other *.svg imports to React components
-      {
-        test: /\.svg$/i,
-        issuer: fileLoaderRule.issuer,
-        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
-        use: ["@svgr/webpack"],
-      }
-    );
+	webpack(config) {
+		// Grab the existing rule that handles SVG imports
+		const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.(".svg"));
 
-    // Modify the file loader rule to ignore *.svg, since we have it handled now.
-    fileLoaderRule.exclude = /\.svg$/i;
+		config.module.rules.push(
+			// Reapply the existing rule, but only for svg imports ending in ?url
+			{
+				...fileLoaderRule,
+				test: /\.svg$/i,
+				resourceQuery: /url/, // *.svg?url
+			},
+			// Convert all other *.svg imports to React components
+			{
+				test: /\.svg$/i,
+				issuer: fileLoaderRule.issuer,
+				resourceQuery: {not: [...fileLoaderRule.resourceQuery.not, /url/]}, // exclude if *.svg?url
+				use: ["@svgr/webpack"],
+			}
+		);
 
-    return config;
-  },
+		// Modify the file loader rule to ignore *.svg, since we have it handled now.
+		fileLoaderRule.exclude = /\.svg$/i;
 
-  // ...other config
+		return config;
+	},
+
+	// ...other config
 };
 
 export default nextConfig;
