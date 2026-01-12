@@ -7,6 +7,9 @@ const nextConfig = {
 		unoptimized: true,
 	},
 
+	// 🔑 FIX CSS & JS paths for GitHub Pages
+	assetPrefix: "./",
+
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
