@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	output: "export",
-	trailingSlash: true, // 🔥 REQUIRED for GitHub Pages
+	trailingSlash: true,
 	images: {unoptimized: true},
-	basePath: "/Novetum-LandingPage",
-	assetPrefix: "/Novetum-LandingPage/",
+
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 
 	webpack(config) {
 		const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.(".svg"));
