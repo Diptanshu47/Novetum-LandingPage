@@ -7,8 +7,9 @@ const nextConfig = {
 		unoptimized: true,
 	},
 
-	// 🔑 FIX CSS & JS paths for GitHub Pages
-	assetPrefix: "./",
+	// REQUIRED for GitHub Pages project site + next/font
+	basePath: "/Novetum-LandingPage",
+	assetPrefix: "/Novetum-LandingPage/",
 
 	eslint: {
 		ignoreDuringBuilds: true,
