@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
 	output: "export",
 	trailingSlash: true,
@@ -7,9 +10,9 @@ const nextConfig = {
 		unoptimized: true,
 	},
 
-	// REQUIRED for GitHub Pages project site + next/font
-	basePath: "/Novetum-LandingPage",
-	assetPrefix: "/Novetum-LandingPage/",
+	// Only use subpath on GitHub Pages
+	basePath: isProd ? "/Novetum-LandingPage" : "",
+	assetPrefix: isProd ? "/Novetum-LandingPage/" : "",
 
 	eslint: {
 		ignoreDuringBuilds: true,
@@ -27,9 +30,11 @@ const nextConfig = {
 			{
 				test: /\.svg$/i,
 				issuer: fileLoaderRule.issuer,
-				resourceQuery: {not: [...fileLoaderRule.resourceQuery.not, /url/]},
+				resourceQuery: {
+					not: [...fileLoaderRule.resourceQuery.not, /url/],
+				},
 				use: ["@svgr/webpack"],
-			}
+			},
 		);
 
 		fileLoaderRule.exclude = /\.svg$/i;

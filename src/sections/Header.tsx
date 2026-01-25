@@ -1,17 +1,14 @@
 "use client";
-
 import {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {Menu} from "lucide-react";
-
 import Logo from "@/assets/logosaas.png";
-
 import {Button} from "@/components/ui/button";
 import {Sheet, SheetContent, SheetTrigger, SheetTitle} from "@/components/ui/sheet";
-
 import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
+import pagecontent from "@/data/pagecontent.json";
 
 const fadeDown = {
 	hidden: {opacity: 0, y: -12},
@@ -30,8 +27,7 @@ export const Header = () => {
 			<div className="container flex h-16 items-center justify-between">
 				{/* Logo */}
 				<Link href="/" className="flex items-center gap-2 text-2xl font-bold text-black">
-					<Image src={Logo} alt="Novetum logo" width={36} height={36} />
-					<span>Novetum</span>
+					<span className="font-serif font-bold tracking-tight text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#1E40AF]">{pagecontent.brand}</span>
 				</Link>
 
 				{/* Desktop Navigation */}
@@ -39,21 +35,21 @@ export const Header = () => {
 					<a href="#home" className="transition hover:text-black">
 						Home
 					</a>
-					<a href="#about" className="transition hover:text-black">
-						About
+					<a href="#sovereign-span" className="transition hover:text-black">
+						The Sovereign Span
 					</a>
-					<a href="#customers" className="transition hover:text-black">
-						Customers
+					<a href="#partnerships" className="transition hover:text-black">
+						Partnerships
 					</a>
-					<a href="#updates" className="transition hover:text-black">
-						Updates
+					<a href="#deploy" className="transition hover:text-black">
+						Deploy
 					</a>
 				</nav>
 
 				{/* Desktop CTA */}
 				<div className="hidden md:block">
 					<Button className="rounded-lg bg-black text-white hover:bg-black/90">
-						<a href="#contact">Contact</a>
+						<a href="#contact">Request Partnership</a>
 					</Button>
 				</div>
 
@@ -72,18 +68,18 @@ export const Header = () => {
 							<a href="#home" onClick={() => setOpen(false)}>
 								Home
 							</a>
-							<a href="#about" onClick={() => setOpen(false)}>
-								About
+							<a href="#sovereign-span" onClick={() => setOpen(false)}>
+								The Sovereign Span
 							</a>
-							<a href="#customers" onClick={() => setOpen(false)}>
-								Customers
+							<a href="#partnerships" onClick={() => setOpen(false)}>
+								Partnerships
 							</a>
-							<a href="#updates" onClick={() => setOpen(false)}>
-								Updates
+							<a href="#deploy" onClick={() => setOpen(false)}>
+								Deploy
 							</a>
 
 							<Button className="mt-4 w-full rounded-lg bg-black text-white hover:bg-black/90" onClick={() => setOpen(false)}>
-								<a href="#contact">Contact</a>
+								<a href="#contact">Request Partnership</a>
 							</Button>
 						</nav>
 					</SheetContent>
