@@ -4,6 +4,7 @@ import starImage from "@/assets/star.png";
 import springImage from "@/assets/spring.png";
 import {motion, useScroll, useTransform} from "framer-motion";
 import {useRef} from "react";
+import pagecontent from "@/data/pagecontent.json";
 
 export const CallToAction = () => {
 	const sectionRef = useRef(null);
@@ -15,11 +16,14 @@ export const CallToAction = () => {
 	const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
 	return (
-		<section id="updates" ref={sectionRef} className="bg-gradient-to-b from-white to-[#D2DCFF] py-12 sm:py-16 overflow-x-clip">
+		<section id="deploy" ref={sectionRef} className="bg-gradient-to-b from-white to-[#D2DCFF] py-12 sm:py-16 overflow-x-clip">
 			<div className="container py-8 sm:py-36">
 				<div className="section-heading relative">
-					<h2 className="section-title">Sign up for free today</h2>
-					<p className="section-des mt-5">Celebrate the joy of accomplishment with an app designed to track your progress and motivate your efforts.</p>
+					<h2 className="section-title">{pagecontent.cta.title}</h2>
+					<p className="section-des mt-5">
+						{pagecontent.cta.text[0]} {pagecontent.cta.text[1]}
+					</p>
+					<p className="section-des mt-3">{pagecontent.cta.text[2]}</p>
 
 					<motion.img
 						src={starImage.src}
@@ -42,9 +46,9 @@ export const CallToAction = () => {
 				</div>
 
 				<div className="flex gap-2 mt-10 justify-center">
-					<button className="btn btn-primary">Get for free</button>
+					<button className="btn btn-primary">Request Partnership</button>
 					<button className="btn btn-text gap-1">
-						<span>Learn more</span>
+						<span>View Architecture</span>
 						<ArrowRight className="h-5 w-5" />
 					</button>
 				</div>

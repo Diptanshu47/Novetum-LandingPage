@@ -9,64 +9,65 @@ import avatar7 from "@/assets/avatar-7.png";
 import avatar8 from "@/assets/avatar-8.png";
 import avatar9 from "@/assets/avatar-9.png";
 import Image from "next/image";
-import React, {use} from "react";
+import React from "react";
 import {twMerge} from "tailwind-merge";
 import {motion} from "framer-motion";
+import pagecontent from "@/data/pagecontent.json";
 
 const testimonials = [
 	{
-		text: "As a seasoned designer always on the lookout for innovative tools, Framer.com instantly grabbed my attention.",
+		text: "Novetum transformed our global infrastructure. We went from managing fragmented systems to commanding a unified presence across continents.",
 		imageSrc: avatar1.src,
-		name: "Jamie Rivera",
-		username: "@jamietechguru00",
+		name: "Sarah Chen",
+		username: "@sarahchen_tech",
 	},
 	{
-		text: "Our team's productivity has skyrocketed since we started using this tool. ",
+		text: "The Sovereign Span changed everything. Our latency issues disappeared, and we finally have true visibility across all our operations.",
 		imageSrc: avatar2.src,
-		name: "Josh Smith",
-		username: "@jjsmith",
+		name: "Marcus Rodriguez",
+		username: "@mrodriguez_cto",
 	},
 	{
-		text: "This app has completely transformed how I manage my projects and deadlines.",
+		text: "We needed to scale globally without losing control. Novetum made it possible to expand deliberately while maintaining architectural clarity.",
 		imageSrc: avatar3.src,
-		name: "Morgan Lee",
-		username: "@morganleewhiz",
+		name: "Priya Malhotra",
+		username: "@priyamalhotra",
 	},
 	{
-		text: "I was amazed at how quickly we were able to integrate this app into our workflow.",
+		text: "Distance is no longer a constraint for us. Novetum's infrastructure allows us to serve users worldwide as if they were local.",
 		imageSrc: avatar4.src,
-		name: "Casey Jordan",
-		username: "@caseyj",
+		name: "David Kim",
+		username: "@davidkim_ops",
 	},
 	{
-		text: "Planning and executing events has never been easier. This app helps me keep track of all the moving parts, ensuring nothing slips through the cracks.",
+		text: "The anticipatory load intelligence is remarkable. Our systems adapt before we even see the demand spike coming.",
 		imageSrc: avatar5.src,
-		name: "Taylor Kim",
-		username: "@taylorkimm",
+		name: "Elena Petrov",
+		username: "@elenap_eng",
 	},
 	{
-		text: "The customizability and integration capabilities of this app are top-notch.",
+		text: "We maintain sovereignty over our data and policies regardless of where our users are. That's the game changer.",
 		imageSrc: avatar6.src,
-		name: "Riley Smith",
-		username: "@rileysmith1",
+		name: "James Watson",
+		username: "@jwatson_security",
 	},
 	{
-		text: "Adopting this app for our team has streamlined our project management and improved communication across the board.",
+		text: "Novetum doesn't just solve problems—it redefines what's possible with global infrastructure.",
 		imageSrc: avatar7.src,
-		name: "Jordan Patels",
-		username: "@jpatelsdesign",
+		name: "Aisha Rahman",
+		username: "@aisha_devops",
 	},
 	{
-		text: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
+		text: "Our partnership with Novetum allowed us to establish territorial presence with confidence. Expansion became strategic, not chaotic.",
 		imageSrc: avatar8.src,
-		name: "Sam Dawson",
-		username: "@dawsontechtips",
+		name: "Thomas Anderson",
+		username: "@tanderson_ceo",
 	},
 	{
-		text: "Its user-friendly interface and robust features support our diverse needs.",
+		text: "The unified command plane gives us panoramic visibility. Every node, every region, every connection—all manageable from one place.",
 		imageSrc: avatar9.src,
-		name: "Casey Harper",
-		username: "@casey09",
+		name: "Mei Lin",
+		username: "@meilin_platform",
 	},
 ];
 
@@ -114,16 +115,35 @@ const TestimonialsColumn = (props: {className?: string; testimonials: typeof tes
 
 export const Testimonials = () => {
 	return (
-		<section id="customers" className="bg-white py-24">
+		<section id="partnerships" className="bg-white py-24">
 			<div className="container">
 				<div className="section-heading">
 					<div className="flex justify-center">
-						<div className="tag">Testimonials</div>
+						<div className="tag">{pagecontent.partnership.content[0]}</div>
 					</div>
 
-					<h2 className="section-title mt-5">What our users say</h2>
-					<p className="section-des mt-5">From intuitive design to powerful features, out app has become an essential tool for users around the world.</p>
+					<h2 className="section-title mt-5">{pagecontent.partnership.title}</h2>
+					<p className="section-des mt-5">{pagecontent.partnership.content[1]}</p>
 				</div>
+
+				{/* Case Study Highlight */}
+				<motion.div
+					initial={{opacity: 0, y: 20}}
+					whileInView={{opacity: 1, y: 0}}
+					transition={{duration: 0.6}}
+					viewport={{once: true}}
+					className="max-w-[800px] mx-auto mt-12 mb-16 p-8 bg-gradient-to-br from-[#183EC2]/10 to-[#001E80]/10 border-2 border-[#183EC2]/20 rounded-2xl"
+				>
+					<div className="flex items-start gap-4 mb-4">
+						<img src="https://api.iconify.design/lucide:building-2.svg?color=%23183EC2" alt="case study" className="w-8 h-8 flex-shrink-0" />
+						<div>
+							<h3 className="text-xl font-bold text-[#183EC2] mb-2">Featured Partnership</h3>
+							<p className="text-[#010D3E] leading-relaxed mb-3">{pagecontent.partnership.content[2]}</p>
+							<p className="text-[#010D3E] leading-relaxed mb-3">{pagecontent.partnership.content[3]}</p>
+							<p className="text-[#010D3E] font-medium italic">{pagecontent.partnership.content[4]}</p>
+						</div>
+					</div>
+				</motion.div>
 
 				<div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
 					<TestimonialsColumn testimonials={firstColumn} duration={15} />
