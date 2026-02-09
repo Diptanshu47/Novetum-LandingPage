@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {Menu} from "lucide-react";
-import Logo from "@/assets/logosaas.png";
+// import Logo from "@/assets/logosaas.png";
+import Logo from "@/assets/novetum logo.png";
 import {Button} from "@/components/ui/button";
 import {Sheet, SheetContent, SheetTrigger, SheetTitle} from "@/components/ui/sheet";
 import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
@@ -27,11 +28,12 @@ export const Header = () => {
 			<div className="container flex h-16 items-center justify-between">
 				{/* Logo */}
 				<Link href="/" className="flex items-center gap-2 text-2xl font-bold text-black">
-					<span className="font-serif font-bold tracking-tight text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#1E40AF]">{pagecontent.brand}</span>
+					{/* <span className="font-serif font-bold tracking-tight text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#1E40AF]">{pagecontent.brand}</span> */}
+					<img src={Logo.src} alt="Novetum Logo" className="h-8 w-8" />
 				</Link>
 
 				{/* Desktop Navigation */}
-				<nav className="hidden md:flex items-center gap-6 text-sm font-medium text-black/70">
+				{/* <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-black/70">
 					<a href="#home" className="transition hover:text-black">
 						Home
 					</a>
@@ -44,12 +46,12 @@ export const Header = () => {
 					<a href="#deploy" className="transition hover:text-black">
 						Deploy
 					</a>
-				</nav>
+				</nav> */}
 
 				{/* Desktop CTA */}
 				<div className="hidden md:block">
 					<Button className="rounded-lg bg-black text-white hover:bg-black/90">
-						<a href="#contact">Request Partnership</a>
+						<a href="/contact">Contact Now</a>
 					</Button>
 				</div>
 
@@ -64,7 +66,7 @@ export const Header = () => {
 							<SheetTitle>Mobile Navigation</SheetTitle>
 						</VisuallyHidden>
 
-						<nav className="mt-16 flex flex-col items-center gap-6 text-lg font-medium">
+						{/* <nav className="mt-16 flex flex-col items-center gap-6 text-lg font-medium">
 							<a href="#home" onClick={() => setOpen(false)}>
 								Home
 							</a>
@@ -79,9 +81,9 @@ export const Header = () => {
 							</a>
 
 							<Button className="mt-4 w-full rounded-lg bg-black text-white hover:bg-black/90" onClick={() => setOpen(false)}>
-								<a href="#contact">Request Partnership</a>
+								<a href="#contact">Contact Now</a>
 							</Button>
-						</nav>
+						</nav> */}
 					</SheetContent>
 				</Sheet>
 			</div>

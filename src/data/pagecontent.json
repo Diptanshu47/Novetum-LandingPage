@@ -1,39 +1,39 @@
 {
 	"brand": "Novetum",
 
-	"tagline": "Accelerating Ambition",
+	"tagline": "Enterprise AI. Executed.",
 
-	"headline": "Don’t just reach. Reign.",
+	"headline": "Cut Costs. Scale Faster. Automate Everything.",
 
-	"subheadline": "Software engineered to collapse distance—connecting your boldest ideas to your furthest users, without compromise.",
+	"subheadline": "Enterprise AI that runs your business — not the other way around.",
 
 	"intro": [
-		"Distance is no longer a limitation. It’s leverage.",
-		"Most software is designed to function within boundaries.",
-		"Novetum was designed to dissolve them.",
-		"Where conventional systems degrade with distance, Novetum strengthens.",
-		"We provide the structural backbone that turns ambition into reach, and reach into dominance—redefining how modern systems scale across the world."
+		"Most AI initiatives stall before they deliver value.",
+		"Not because the technology isn’t ready — but because it’s built for demos, not decisions.",
+		"Novetum exists to change that.",
+		"We build AI agents that think, decide, and act inside real business workflows.",
+		"Deployed in weeks. ROI in months. Automation that actually executes."
 	],
 
 	"sovereignSpan": {
-		"title": "The Sovereign Span",
+		"title": "Agentic Intelligence",
 		"description": [
-			"The Sovereign Span is not a feature.",
-			"It’s a new way of thinking about reach.",
-			"It is the continuous, resilient layer that connects your infrastructure, data, and users—regardless of geography—while preserving speed, control, and intent.",
-			"No fragmentation. No blind spots. No loss of authority at the edge.",
-			"With Novetum, your system doesn’t stretch.",
-			"It spans."
+			"Agentic Intelligence is not a chatbot.",
+			"It’s autonomous execution at enterprise scale.",
+			"Our AI agents reason, plan, and act across your systems — finance, operations, support, and strategy.",
+			"No fragile pilots. No disconnected tools. No manual babysitting.",
+			"With Novetum, AI doesn’t assist work.",
+			"It runs it."
 		]
 	},
 
 	"problem": {
-		"title": "Why Distance Fails Traditional Software",
-		"assumptions": ["That users live close to infrastructure", "That performance naturally degrades with scale", "That global control requires regional compromise"],
+		"title": "Why Most AI Fails in the Enterprise",
+		"assumptions": ["That pilots naturally become production systems", "That models survive real-world complexity", "That ROI will appear eventually"],
 		"conclusion": [
-			"These assumptions create latency, inconsistency, and fractured visibility.",
-			"Novetum rejects them entirely.",
-			"We architect systems where distance becomes irrelevant—and expansion becomes deterministic."
+			"These assumptions lead to stalled deployments, broken systems, and perpetual experimentation.",
+			"Novetum rejects that approach.",
+			"We build AI for production first — engineered to operate, adapt, and scale."
 		]
 	},
 
@@ -41,16 +41,16 @@
 		"title": "What Novetum Enables",
 		"items": [
 			{
-				"title": "Global Presence Without Global Fragility",
-				"text": ["Deploy anywhere in the world while maintaining uniform performance and behavior.", "Your application feels local to every user, while remaining globally coherent."]
+				"title": "Autonomous Execution",
+				"text": ["AI agents that complete multi-step workflows end-to-end.", "From approvals to escalations to resolution — without constant human intervention."]
 			},
 			{
-				"title": "Expansion With Intent",
-				"text": ["Scale is not accidental.", "Novetum allows you to expand deliberately—preserving stability, predictability, and architectural clarity as your footprint grows."]
+				"title": "Decision Velocity",
+				"text": ["Real-time intelligence replaces delayed reports.", "Your teams act faster because insights are already synthesized and operationalized."]
 			},
 			{
-				"title": "Unified Command",
-				"text": ["Operate from a single, authoritative control plane.", "Every node, region, and connection is visible, manageable, and accountable—without operational sprawl."]
+				"title": "Scalable Operations Without Headcount",
+				"text": ["Grow output without growing overhead.", "AI agents absorb operational load so your people focus on strategy and growth."]
 			}
 		]
 	},
@@ -59,16 +59,16 @@
 		"title": "The Novetum Advantage",
 		"items": [
 			{
-				"title": "Architectural Recomposition",
-				"text": "Novetum doesn’t layer on top of existing networks—it reorganizes how systems communicate, reducing dependency on distance-bound protocols."
+				"title": "Production-Grade Agentic AI",
+				"text": "We don’t ship prototypes. Every agent is built to survive real data, real users, and real consequences."
 			},
 			{
-				"title": "Sovereign Control",
-				"text": "Your data, policies, and user experience remain under your governance—independent of geography, infrastructure provider, or edge complexity."
+				"title": "Context-Aware Intelligence",
+				"text": "Our AI understands your data, your systems, and your goals — delivering outcomes, not generic outputs."
 			},
 			{
-				"title": "Anticipatory Load Intelligence",
-				"text": "As usage patterns evolve, Novetum adapts ahead of demand—ensuring performance remains intact before strain appears."
+				"title": "Human Control by Design",
+				"text": "Full transparency and human-in-the-loop governance ensure AI autonomy without losing oversight."
 			}
 		]
 	},
@@ -76,31 +76,31 @@
 	"partnership": {
 		"title": "The Strategic Partnership Model",
 		"content": [
-			"Validated by Visionaries",
-			"Novetum is currently in a selective deployment phase, collaborating with organizations that operate at scale or are about to.",
-			"Our work with Sarakshi Travels demonstrates what happens when reach is treated as a strategic asset.",
-			"By integrating Novetum, they didn’t merely extend operations; they established territorial presence with confidence and control.",
-			"These partnerships serve as living proof, not case studies."
+			"Built for Leaders, Not Experimenters",
+			"Novetum works with enterprises ready to operationalize AI — not test it endlessly.",
+			"We onboard a limited number of partners each quarter to ensure execution quality.",
+			"Every engagement delivers a custom AI roadmap tied directly to business metrics.",
+			"This is not consulting. It’s deployment."
 		]
 	},
 
 	"process": {
-		"title": "How Reigning Works",
+		"title": "How Execution Happens",
 		"steps": [
 			{
 				"step": 1,
-				"title": "Define the Horizon",
-				"text": "We analyze your current architecture, growth goals, and geographic reach to uncover structural limitations."
+				"title": "Discover",
+				"text": "We identify your highest-impact opportunities for AI automation and decision acceleration."
 			},
 			{
 				"step": 2,
-				"title": "Establish the Span",
-				"text": "Novetum is deployed as the connective tissue—bridging gaps with low-latency, high-integrity pathways."
+				"title": "Deploy",
+				"text": "Custom AI agents integrate directly into your existing stack — no rip-and-replace."
 			},
 			{
 				"step": 3,
-				"title": "Command Continuously",
-				"text": "You oversee everything from a single, panoramic interface—monitoring performance, enforcing policy, and steering expansion in real time."
+				"title": "Scale",
+				"text": "As your business evolves, performance compounds automatically through adaptive intelligence."
 			}
 		]
 	},
@@ -108,21 +108,21 @@
 	"audience": {
 		"title": "Who Novetum Is For",
 		"list": [
-			"Companies building globally from day one",
-			"Enterprises expanding beyond regional constraints",
-			"Platforms where performance, consistency, and control are non-negotiable",
-			"Teams who refuse to trade sovereignty for scale"
+			"Operations leaders drowning in manual processes",
+			"Finance teams pursuing cost efficiency at scale",
+			"Enterprises ready to operationalize AI — not experiment with it",
+			"Founders and executives who refuse to wait for AI maturity"
 		],
-		"closing": "If reach defines your future, Novetum defines how you get there."
+		"closing": "If you’re serious about AI driving real business outcomes, Novetum is built for you."
 	},
 
 	"cta": {
-		"title": "The Map Is Yours",
+		"title": "Stop Experimenting. Start Executing.",
 		"text": [
-			"Global dominance doesn’t happen by accident.",
-			"It’s engineered.",
-			"We are accepting a limited number of strategic partners for our next deployment cycle.",
-			"If you’re ready to stop adapting to distance—and start commanding it—let’s architect your future."
+			"AI value doesn’t come from ideas — it comes from deployment.",
+			"We’re onboarding a select number of enterprise partners this quarter.",
+			"Book a 30-minute AI strategy call.",
+			"No pitch. Just a clear roadmap to AI-driven efficiency."
 		]
 	}
 }

@@ -46,10 +46,12 @@ export const CallToAction = () => {
 				</div>
 
 				<div className="flex gap-2 mt-10 justify-center">
-					<button className="btn btn-primary">Request Partnership</button>
+					<a href="/contact">
+						<button className="btn btn-primary">Request Partnership</button>
+					</a>
 					<button className="btn btn-text gap-1">
-						<span>View Architecture</span>
-						<ArrowRight className="h-5 w-5" />
+						{/* <span>View Architecture</span> */}
+						{/* <ArrowRight className="h-5 w-5" /> */}
 					</button>
 				</div>
 			</div>

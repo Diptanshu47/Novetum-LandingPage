@@ -4,7 +4,7 @@ import pagecontent from "@/data/pagecontent.json";
 
 export const Problem = () => {
 	return (
-		<section className="py-24 bg-gradient-to-b from-[#0a0a0a] to-[#1a1a2e] text-white overflow-hidden">
+		<section id="oldparadigm" className="py-24 bg-gradient-to-b from-[#0a0a0a] to-[#1a1a2e] text-white overflow-hidden">
 			<div className="container">
 				<div className="max-w-[640px] mx-auto text-center">
 					<motion.div initial={{opacity: 0, y: 20}} whileInView={{opacity: 1, y: 0}} transition={{duration: 0.6}} viewport={{once: true}}>
