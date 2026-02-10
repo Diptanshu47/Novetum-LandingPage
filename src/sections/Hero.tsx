@@ -26,10 +26,12 @@ export const Hero = () => {
 						<h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">{pagecontent.headline}</h1>
 						<p className="text-xl text-[#010D3E] tracking-tight mt-6">{pagecontent.subheadline}</p>
 						<div className="flex gap-1 items-center mt-[30px]">
-							<button className="btn btn-primary">Begin Deployment</button>
+							<a href="#deploy">
+								<button className="btn btn-primary">Begin Deployment</button>
+							</a>
 							<button className="btn btn-text flex gap-1">
-								<span>Explore The Span</span>
-								<ArrowIcon className="h-5 w-5" />
+								{/* <span>Explore The Span</span> */}
+								{/* <ArrowIcon className="h-5 w-5" /> */}
 							</button>
 						</div>
 					</div>

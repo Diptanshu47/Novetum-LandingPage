@@ -4,7 +4,7 @@ import pagecontent from "@/data/pagecontent.json";
 
 export const Features = () => {
 	return (
-		<section className="bg-white py-24">
+		<section id="technical-excellence" className="bg-white py-24">
 			<div className="container">
 				{/* Section Header */}
 				<div className="section-heading max-w-[640px] mx-auto">

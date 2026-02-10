@@ -65,7 +65,7 @@ export const Pricing = () => {
 								<p className={twMerge("text-sm leading-relaxed", inverse && "text-white/80")}>{description[0]}</p>
 								{description[1] && <p className={twMerge("text-sm leading-relaxed mt-4", inverse && "text-white/80")}>{description[1]}</p>}
 							</div>
-							<button className={twMerge("btn btn-primary w-full mt-[30px]", inverse && "bg-white text-black")}>Learn More</button>
+							{/* <button className={twMerge("btn btn-primary w-full mt-[30px]", inverse && "bg-white text-black")}>Learn More</button> */}
 						</div>
 					))}
 				</div>
