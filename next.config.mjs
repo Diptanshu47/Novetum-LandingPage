@@ -1,26 +1,20 @@
 /** @type {import('next').NextConfig} */
-
-const isProd = process.env.NODE_ENV === "production";
+const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
 
 const nextConfig = {
 	output: "export",
 	trailingSlash: true,
-
 	images: {
 		unoptimized: true,
 	},
-
-	// Only use subpath on GitHub Pages
-	basePath: isProd ? "/Novetum-LandingPage" : "",
-	assetPrefix: isProd ? "/Novetum-LandingPage/" : "",
-
+	// Only use subpath for GitHub Pages
+	basePath: isGitHubPages ? "/Novetum-LandingPage" : "",
+	assetPrefix: isGitHubPages ? "/Novetum-LandingPage/" : "",
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
-
 	webpack(config) {
 		const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.(".svg"));
-
 		config.module.rules.push(
 			{
 				...fileLoaderRule,
@@ -36,10 +30,8 @@ const nextConfig = {
 				use: ["@svgr/webpack"],
 			},
 		);
-
 		fileLoaderRule.exclude = /\.svg$/i;
 		return config;
 	},
 };
-
 export default nextConfig;
