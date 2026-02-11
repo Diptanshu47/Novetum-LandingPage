@@ -5,6 +5,7 @@ import springImage from "@/assets/spring.png";
 import {motion, useScroll, useTransform} from "framer-motion";
 import {useRef} from "react";
 import pagecontent from "@/data/pagecontent.json";
+import Link from "next/link";
 
 export const CallToAction = () => {
 	const sectionRef = useRef(null);
@@ -46,9 +47,12 @@ export const CallToAction = () => {
 				</div>
 
 				<div className="flex gap-2 mt-10 justify-center">
-					<a href="/contact">
+					{/* <a href="/contact">
 						<button className="btn btn-primary">Request Partnership</button>
-					</a>
+					</a> */}
+					<Link href="/contact">
+						<button className="btn btn-primary">Request Partnership</button>
+					</Link>
 					<button className="btn btn-text gap-1">
 						{/* <span>View Architecture</span> */}
 						{/* <ArrowRight className="h-5 w-5" /> */}

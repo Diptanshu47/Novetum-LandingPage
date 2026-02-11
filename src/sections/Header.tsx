@@ -50,9 +50,12 @@ export const Header = () => {
 
 				{/* Desktop CTA */}
 				<div className="hidden md:block">
-					<Button className="rounded-lg bg-black text-white hover:bg-black/90">
+					<Link href="/contact">
+						<button className="rounded-lg bg-black text-white hover:bg-black/90">Contact Now</button>
+					</Link>
+					{/* <Button className="rounded-lg bg-black text-white hover:bg-black/90">
 						<a href="/contact">Contact Now</a>
-					</Button>
+					</Button> */}
 				</div>
 
 				{/* Mobile Menu */}

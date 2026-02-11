@@ -1,15 +1,10 @@
 /** @type {import('next').NextConfig} */
-const isGitHubPages = process.env.GITHUB_ACTIONS === "true";
-
 const nextConfig = {
 	output: "export",
 	trailingSlash: true,
 	images: {
 		unoptimized: true,
 	},
-	// Only use subpath for GitHub Pages
-	basePath: isGitHubPages ? "/Novetum-LandingPage" : "",
-	assetPrefix: isGitHubPages ? "/Novetum-LandingPage/" : "",
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
@@ -34,4 +29,5 @@ const nextConfig = {
 		return config;
 	},
 };
+
 export default nextConfig;
