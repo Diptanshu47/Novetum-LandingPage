@@ -7,7 +7,10 @@ const dmSans = DM_Sans({subsets: ["latin"]});
 
 export const metadata: Metadata = {
 	title: "Novetum",
-	description: "Novetum Landing Page with React, Next.js, TailwindCSS & Framer Motion",
+	description: "Enterprise AI that runs your business — not the other way around.",
+	icons: {
+		icon: "/favicon.ico",
+	},
 };
 
 export default function RootLayout({

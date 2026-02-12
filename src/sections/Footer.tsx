@@ -1,15 +1,32 @@
-import logo from "@/assets/logosaas.png";
-import SocialX from "@/assets/social-x.svg";
+"use client";
 import SocialInsta from "@/assets/social-insta.svg";
 import SocialLinkedin from "@/assets/social-linkedin.svg";
-import SocialPin from "@/assets/social-pin.svg";
-import SocialYoutube from "@/assets/social-youtube.svg";
 import Image from "next/image";
-// import Logo from "@/assets/novetum logo.png";
+import {useRouter, usePathname} from "next/navigation";
 import Logo from "@/assets/fulllogo.png";
 import pagecontent from "@/data/pagecontent.json";
 
 export const Footer = () => {
+	const router = useRouter();
+	const pathname = usePathname();
+
+	const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+		if (href.startsWith("#")) {
+			e.preventDefault();
+
+			// If we're on the home page, scroll directly
+			if (pathname === "/") {
+				const element = document.querySelector(href);
+				if (element) {
+					element.scrollIntoView({behavior: "smooth", block: "start"});
+				}
+			} else {
+				// If we're on another page (like /contact), navigate to home first
+				router.push("/" + href);
+			}
+		}
+	};
+
 	return (
 		<footer id="contact" className="bg-black text-[#BCBCBC]">
 			{/* Top Section */}
@@ -18,16 +35,8 @@ export const Footer = () => {
 					{/* Brand */}
 					<div>
 						<div className="inline-flex mb-6">
-							<span
-								className="font-serif font-bold tracking-tight text-2xl
-    bg-clip-text text-transparent
-    bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#1E40AF]"
-							>
-								{/* {pagecontent.brand} */}
-								<img src={Logo.src} alt="Novetum Logo" className="h-16 w-60" />
-							</span>
+							<Image src={Logo} alt="Novetum Logo" className="h-16 w-60" width={240} height={64} />
 						</div>
-
 						<p className="text-sm leading-relaxed max-w-xs">{pagecontent.intro[4]}</p>
 					</div>
 
@@ -36,34 +45,29 @@ export const Footer = () => {
 						<h4 className="text-white font-medium mb-6">Navigation</h4>
 						<ul className="space-y-4 text-sm">
 							<li>
-								<a href="#home" className="hover:text-white transition">
+								<a href="#home" onClick={(e) => handleNavClick(e, "#home")} className="hover:text-white transition-colors cursor-pointer">
 									Home
 								</a>
 							</li>
 							<li>
-								<a href="#oldparadigm" className="hover:text-white transition">
-									The Old Paradigm
+								<a href="#oldparadigm" onClick={(e) => handleNavClick(e, "#oldparadigm")} className="hover:text-white transition-colors cursor-pointer">
+									Old Paradigm
 								</a>
 							</li>
 							<li>
-								<a href="#technical-excellence" className="hover:text-white transition">
-									Technical Excellence
+								<a href="#technical-excellence" onClick={(e) => handleNavClick(e, "#technical-excellence")} className="hover:text-white transition-colors cursor-pointer">
+									Capabilities
 								</a>
 							</li>
 							<li>
-								<a href="#deploy" className="hover:text-white transition">
-									Deploy
+								<a href="#deploy" onClick={(e) => handleNavClick(e, "#deploy")} className="hover:text-white transition-colors cursor-pointer">
+									Execution Model
 								</a>
 							</li>
 							<li className="relative group">
 								<span className="cursor-not-allowed text-gray-500">Documentation</span>
-
 								{/* Tooltip */}
-								<span
-									className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full mt-2 
-    whitespace-nowrap rounded bg-gray-800 px-3 py-1 text-xs text-gray-300 opacity-0 
-    transition-opacity group-hover:opacity-100"
-								>
+								<span className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full mt-2 whitespace-nowrap rounded bg-gray-800 px-3 py-1 text-xs text-gray-300 opacity-0 transition-opacity group-hover:opacity-100">
 									Coming soon
 								</span>
 							</li>
@@ -73,27 +77,31 @@ export const Footer = () => {
 					{/* Contact + Social */}
 					<div className="md:text-right">
 						<h4 className="text-white font-medium mb-6">Strategic Partnerships</h4>
-
 						<ul className="space-y-3 text-sm mb-6">
 							<li>
-								<b>Email</b>: systems@novetum.com
+								<b>Email</b>:{" "}
+								<a href="mailto:systems@novetum.com" className="hover:text-white transition-colors">
+									systems@novetum.com
+								</a>
 							</li>
 							<li>
-								<b>Location</b>: B Square 1st floor, <br></br>Huda Enclave, Madhapur
+								<b>Location</b>: B Square 1st floor, <br />
+								Huda Enclave, Madhapur 500081
 							</li>
 						</ul>
-
 						<div className="flex gap-6 md:justify-end justify-center">
-							{/* <SocialX /> */}
-							<a href="https://www.instagram.com/novetum.ai/" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.instagram.com/novetum.ai/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity" aria-label="Visit our Instagram">
 								<SocialInsta />
 							</a>
-							<a href="https://www.linkedin.com/company/novetum/" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://www.linkedin.com/company/novetum/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="hover:opacity-70 transition-opacity"
+								aria-label="Visit our LinkedIn"
+							>
 								<SocialLinkedin />
 							</a>
-
-							{/* <SocialPin /> */}
-							{/* <SocialYoutube /> */}
 						</div>
 					</div>
 				</div>
@@ -105,12 +113,6 @@ export const Footer = () => {
 					<p>
 						© {new Date().getFullYear()} {pagecontent.brand}. All rights reserved.
 					</p>
-
-					{/* <div className="flex gap-6">
-						<button className="hover:text-white transition">Terms</button>
-						<button className="hover:text-white transition">Privacy</button>
-						<button className="hover:text-white transition">Support</button>
-					</div> */}
 				</div>
 			</div>
 		</footer>
